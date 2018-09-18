@@ -55,8 +55,7 @@ app.post('/middleware', parseForm, function (req, res) {
 
 app.post('/login', parseForm, function (req, res, next) {
     //check password and username matches just for testing.
-    //if((req.body.username == 'vimukthim') && (req.body.password == 'ssd_1234'))
-    if(true)
+    if((req.body.username == 'vimukthim') && (req.body.password == 'ssd_1234'))
     {
         //console.log('username and password is correct');
         if(req.cookies._csrf !== req.body._csrf) {
